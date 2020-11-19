@@ -7,17 +7,23 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "sidsoeharto",
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sidsoeharto/express-forum.git"
   },
   "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bootstrap": "^4.5.3",
     "ejs": "^3.1.5",
+    "ejs-lint": "^1.1.0",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "passport": "^0.4.1",
     "pg": "^8.5.1",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "validator": "^13.1.17"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"

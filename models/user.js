@@ -10,12 +10,26 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      User.belongsToMany(models.Subforum, {through: 'Posts'});
+      User.hasMany(models.Comment);
     }
   };
   User.init({
-    username: DataTypes.STRING,
-    password: DataTypes.STRING,
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        len: [6,15]
+      }
+    }, 
+    password: {
+      type:DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [6,100]
+      }
+    },
     email: DataTypes.STRING
   }, {
     sequelize,
