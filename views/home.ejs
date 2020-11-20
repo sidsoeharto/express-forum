@@ -33,6 +33,13 @@
               by <span class="post-user"><a href="/u/<%= post.User.username %>"><%= post.User.username %></a></span>
               from <span><a href="/sf/<%= post.Subforum.name %>">/sf/<%= post.Subforum.name %></a></span>
             </div>
+
+            <div>
+              <ul>
+                <li><a href="/submit/post/edit/<%= post.id %>">Edit</a></li>
+                <li><a href="/submit/post/delete/<%= post.id %>">Delete</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </article>
